@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /assets/js/
 Allow: /
 
 Sitemap: https://htmlcssjs.org/sitemap.xml
