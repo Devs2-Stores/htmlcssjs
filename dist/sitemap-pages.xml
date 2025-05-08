@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
     <loc>https://htmlcssjs.org/pages/about-us/</loc>
     <changefreq>daily</changefreq>
-    <priority>.5</priority>
+    <priority>0.5</priority>
     <lastmod>2025-05-02T12:11:07.774Z</lastmod>
   </url><url>
     <loc>https://htmlcssjs.org/pages/privacy-policy/</loc>
     <changefreq>daily</changefreq>
-    <priority>.5</priority>
+    <priority>0.5</priority>
     <lastmod>2025-05-02T12:11:30.083Z</lastmod>
   </url><url>
     <loc>https://htmlcssjs.org/pages/terms-of-service/</loc>
     <changefreq>daily</changefreq>
-    <priority>.5</priority>
+    <priority>0.5</priority>
     <lastmod>2025-05-02T13:24:27.452Z</lastmod>
   </url>
 </urlset>
