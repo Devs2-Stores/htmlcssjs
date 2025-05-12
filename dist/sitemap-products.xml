@@ -65,5 +65,11 @@
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <lastmod>2025-05-12T18:26:59.519Z</lastmod>
+      </url> 
+      <url>
+        <loc>https://htmlcssjs.org/tools/seo/remove-diacritics/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2025-05-12T19:04:03.420Z</lastmod>
       </url>
 </urlset>
