@@ -59,5 +59,11 @@
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <lastmod>2025-05-02T20:01:40.155Z</lastmod>
+      </url> 
+      <url>
+        <loc>https://htmlcssjs.org/tools/slug/generator/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2025-05-12T18:26:59.519Z</lastmod>
       </url>
 </urlset>
