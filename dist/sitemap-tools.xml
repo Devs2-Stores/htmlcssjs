@@ -3,21 +3,21 @@
         <loc>https://htmlcssjs.org/tools/text/</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        
+        <lastmod></lastmod>
       </url><url>
         <loc>https://htmlcssjs.org/tools/html/</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        
+        <lastmod></lastmod>
       </url><url>
         <loc>https://htmlcssjs.org/tools/css/</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        
+        <lastmod></lastmod>
       </url><url>
         <loc>https://htmlcssjs.org/tools/qr/</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-        
+        <lastmod></lastmod>
       </url>
 </urlset>
