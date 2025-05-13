@@ -71,5 +71,11 @@
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
         <lastmod>2025-05-12T19:04:03.420Z</lastmod>
+      </url> 
+      <url>
+        <loc>https://htmlcssjs.org/tools/color/palette-generator/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2025-05-13T17:55:40.427Z</lastmod>
       </url>
 </urlset>
