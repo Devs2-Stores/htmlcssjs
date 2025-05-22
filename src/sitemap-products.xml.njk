@@ -1,0 +1,19 @@
+---
+permalink: /sitemap-products.xml
+eleventyExcludeFromCollections: true
+---
+{{ '<?xml version="1.0" encoding="UTF-8"?>' | safe }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for collection in collections.tools -%}
+    {%- for page in collection.items %} 
+      <url>
+        <loc>{{ shop.url }}{{ page.url | url }}</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        {% if page.date -%}
+        <lastmod>{{ page.date | isodate }}</lastmod>
+        {%- endif %}
+      </url>
+    {%- endfor -%}
+{%- endfor %}
+</urlset>

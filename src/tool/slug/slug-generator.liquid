@@ -1,0 +1,64 @@
+---
+template: tool
+title: Slug Generator Online - Convert Text to URL Slug | HTMLCSSJS.org
+description: Easily generate SEO-friendly slugs from any text. Remove accents, special characters, and convert to lowercase URL format.
+permalink: /tools/slug/generator/index.html
+tags:
+- slug
+- tool
+- products
+thumbnail: /assets/images/slug-generator.png
+collection: Slug Tools
+collection_handle: slug
+collection_url: /tools/slug/
+slug: slug-generator
+file_slug: generator
+display: production
+layout: base.html
+status: production
+short_title: Slug Generator
+subtitle: "Online Slug Generator: Convert Titles to Clean, SEO-Friendly URLs"
+language: en
+scripts:
+- /assets/js/slug/slug-generator.js
+
+how_to_use:
+- title: How to Use the Slug Generator
+  content: "Follow these simple steps to convert any title or text to a clean slug:"
+  list:
+    - "Paste or type your text into the input box."
+    - "The slug will be generated automatically below."
+    - "Click <strong>Copy Slug</strong> to save it to your clipboard."
+    - "Use <strong>Clear</strong> to reset the fields."
+
+content_depth:
+- title: Why Use a Slug Generator?
+  content: "Slugs are essential for creating SEO-friendly URLs. A good slug enhances readability, boosts indexing performance, and improves your site's click-through rate."
+- title: Benefits of Using Our Slug Generator
+  list:
+    - "Strips away accents and special characters for a clean output."
+    - "Replaces spaces with hyphens, ensuring web-safe URLs."
+    - "Automatically converts all text to lowercase."
+    - "Live generation as you type – no delays."
+
+faq:
+- question: "What is a slug in a URL?"
+  answer: "A slug is the portion of a URL that uniquely identifies a page using readable keywords, often derived from the page title."
+- question: "Can this tool remove accents and special characters from languages like Vietnamese?"
+  answer: "Yes. It normalises unicode and removes accents to ensure clean, standardised slugs."
+- question: "Can I use the generated slug in my CMS or website builder?"
+  answer: "Definitely. It works seamlessly with WordPress, Shopify, Haravan, Webflow, and other platforms."
+- question: "Is the Slug Generator free?"
+  answer: "Yes. It’s completely free to use with no sign-up required."
+- question: "Is it mobile-friendly?"
+  answer: "Absolutely. Our tool is optimised for all devices including smartphones and tablets."
+---
+
+<slug-generator>
+  {%- include 'textarea/input.html' -%}
+  {%- include 'textarea/output.html' -%}
+  <div class="action space-x-2">
+    {%- include 'buttons/copy.html' -%}
+    {%- include 'buttons/clear.html' -%}
+  </div>
+</slug-generator>

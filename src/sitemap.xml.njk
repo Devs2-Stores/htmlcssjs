@@ -1,0 +1,16 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+{{ '<?xml version="1.0" encoding="UTF-8"?>' | safe }}
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemap>
+    <loc>{{ shop.url }}{{ '/sitemap-collections.xml' | url }}</loc>
+  </sitemap>
+  <sitemap>
+    <loc>{{ shop.url }}{{ '/sitemap-products.xml' | url }}</loc>
+  </sitemap>
+   <sitemap>
+    <loc>{{ shop.url }}{{ '/sitemap-pages.xml' | url }}</loc>
+  </sitemap>
+</sitemapindex>

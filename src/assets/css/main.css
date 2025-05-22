@@ -1,0 +1,146 @@
+@import "tailwindcss";
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .container {
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
+  h1 {
+    @apply text-4xl font-bold mb-4;
+  }
+  h2 {
+    @apply text-3xl font-bold mb-4;
+  }
+  h3 {
+    @apply text-xl font-bold mb-2;
+  }
+  h4 {
+    @apply text-lg font-bold mb-2;
+  }
+  h5 {
+    @apply text-base font-bold mb-2;
+  }
+  h6 {
+    @apply text-sm font-bold mb-2;
+  }
+  p {
+    @apply text-base mb-4;
+  }
+  a {
+    cursor: pointer;
+  }
+  a:hover {
+    @apply text-blue-500;
+  }
+  b,
+  strong {
+    @apply font-bold;
+  }
+  em {
+    @apply font-bold;
+  }
+  small {
+    @apply text-sm;
+  }
+  sub {
+    @apply text-sm;
+  }
+  sup {
+    @apply text-sm;
+  }
+  ul,
+  ol {
+    @apply list-none;
+  }
+  li {
+    @apply text-base;
+  }
+  blockquote {
+    @apply border-l-4 pl-4 italic;
+  }
+  code {
+    @apply bg-gray-100 px-1 py-0.5 rounded;
+  }
+  pre {
+    @apply bg-gray-100 p-4 rounded;
+  }
+  img {
+    @apply max-w-full h-auto;
+  }
+  table {
+    @apply border-collapse w-full;
+  }
+  th {
+    @apply text-left bg-gray-200 p-2;
+  }
+  td {
+    @apply border-t border-gray-200 p-2;
+  }
+  hr {
+    @apply border-t border-gray-200 my-4;
+  }
+  input,
+  textarea,
+  select {
+    @apply border border-gray-300 rounded py-2 px-4 w-full bg-white mb-4;
+  }
+  textarea {
+    @apply h-48;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply relative overflow-hidden rounded shadow-2xl cursor-pointer mb-4;
+    @apply w-full xl:w-auto;
+    &:before {
+      content: "";
+      @apply absolute inset-0 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 transition-all duration-500;
+    }
+    &:after {
+      content: "";
+      @apply absolute inset-0 bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 opacity-0 transition-opacity duration-500;
+    }
+    span {
+      @apply relative z-10 flex items-center justify-center px-8 py-2 text-white font-semibold text-lg transition-all duration-500;
+    }
+    &:hover {
+      &:before {
+        @apply scale-110 rotate-2;
+      }
+      &:after {
+        @apply opacity-100;
+      }
+    }
+  }
+
+  .btn-danger {
+    @apply relative overflow-hidden rounded shadow-2xl cursor-pointer mb-4;
+    @apply w-full xl:w-auto;
+    &:before {
+      content: "";
+      @apply absolute inset-0 bg-gradient-to-br from-red-500 via-rose-500 to-pink-600 transition-all duration-500;
+    }
+    &:after {
+      content: "";
+      @apply absolute inset-0 bg-gradient-to-br from-pink-600 via-rose-600 to-red-700 opacity-0 transition-opacity duration-500;
+    }
+    span {
+      @apply relative z-10 flex items-center justify-center px-8 py-2 text-white font-semibold text-lg transition-all duration-500;
+    }
+    &:hover {
+      &:before {
+        @apply scale-110 rotate-2;
+      }
+      &:after {
+        @apply opacity-100;
+      }
+    }
+  }
+}

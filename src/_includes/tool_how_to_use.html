@@ -1,0 +1,17 @@
+{% if how_to_use %}
+<section class="content-depth space-y-4 mt-8">
+  {% for block in how_to_use %}
+  <h2>{{ block.title }}</h2>
+  {% if block.content %}
+  <p>{{ block.content }}</p>
+  {% endif %}
+  {% if block.list %}
+  <ul class="list-decimal list-inside">
+    {% for item in block.list %}
+    <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endfor %}
+</section>
+{% endif %}

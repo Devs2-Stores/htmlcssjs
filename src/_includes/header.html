@@ -1,0 +1,39 @@
+<header class="shadow bg-white fixed w-full top-0 z-20" style="background-color: #106ebe;">
+  <div class="container">
+    <div class="grid grid-cols-12 items-center gap-4">
+      <div class="col-span-4 flex items-center">
+        <a href="/">
+          <img class="max-h-12 w-auto" style="max-height: 4rem; width: auto;" width="280" height="180" loading="eager"
+            decoding="async" fetchpriority="high" src="{{ shop.logo | prepend: shop.url }}" alt="{{ shop.name }}">
+        </a>
+      </div>
+      <div class="hidden! col-span-8 items-center justify-end xl:hidden text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+        </svg>
+      </div>
+      <nav class="hidden xl:flex justify-end xl:col-span-8">
+        <ul class="flex justify-end items-center gap-x-4">
+          {%- for tool in collections.tools -%}
+          {%- assign production_items = tool.items | where: "data.status", "production" -%}
+          {%- if production_items.size > 0 -%}
+          <li>
+            <a href="{{ tool.url | url }}" class="flex items-center justify-center h-[70px] text-white">{{ tool.title
+              }}</a>
+            {%- comment -%}
+            <ul class="hidden">
+              {%- for tool in tool.items -%}
+              <li>
+                <a href="{{ tool.url }}">{{ tool.data.short_title }}</a><br>
+              </li>
+              {%- endfor -%}
+            </ul>
+            {%- endcomment -%}
+          </li>
+          {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

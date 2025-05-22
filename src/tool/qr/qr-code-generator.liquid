@@ -1,0 +1,60 @@
+---
+template: tool
+title: Free QR Code Generator | Create QR Codes Online
+description: |
+  Generate QR codes for URLs, text, and more. Free online QR code generator. 
+  Easily scan your generated QR code with any smartphone. 
+  Customize your QR codes for text, URLs, and more.
+permalink: /tools/qr/generator/index.html
+tags:
+- tool
+- qr
+- products
+thumbnail: /assets/images/qr-code-generator.png
+collection: QR Tools
+collection_handle: qr
+collection_url: /tools/qr/
+slug: generator
+file_slug: qr-code-generator
+plugins:
+- https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js
+scripts:
+- /assets/js/qr/qr-code-generator.js
+layout: base.html
+status: production
+short_title: QR Code Generator
+subtitle: "Create Custom QR Codes for Free - Fast and Easy Online Tool"
+language: en
+---
+<section id="qr-code-generator-section" class="block space-y-8" aria-labelledby="tool-title">
+  <div id="tool-qr-code-generator">
+    <qr-code-generator class="block">
+      <div class="input">
+        <label for="qrInput" class="sr-only">Enter text or URL here</label>
+        <input type="text" id="qrInput" placeholder="Enter text or URL here" aria-label="Enter text or URL here">
+      </div>
+      <div class="action">
+        <button id="generateBtn" class="btn-primary" aria-label="Generate QR Code">
+          <span>Generate QR Code</span>
+        </button>
+      </div>
+      <div class="result">
+        <label for="qrResult" class="sr-only">Generated QR Code</label>
+        <div id="qrResult" aria-live="polite" aria-label="Generated QR Code"></div>
+      </div>
+      <div class="action_for_result">
+        <button id="downloadBtn" class="btn-primary" aria-label="Download QR Code" hidden>
+          <span>Download QR Code</span>
+        </button>
+      </div>
+    </qr-code-generator>
+  </div>
+  <div class="how-to-use">
+    <h2>How to use the QR Code Generator</h2>
+    <ol class="list-decimal list-inside">
+      <li>Enter the text or URL you want to convert into a QR code.</li>
+      <li>Click the <strong>Generate QR Code</strong> button.</li>
+      <li>Your QR code will be displayed below. You can scan it with any QR code reader.</li>
+    </ol>
+  </div>
+</section>

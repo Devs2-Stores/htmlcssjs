@@ -1,0 +1,67 @@
+---
+template: tool
+title: HTML Minify Tool | Free Online HTML Minifier
+description: |
+  Free online tool to minify HTML code. Quickly reduce the size of your HTML files by removing unnecessary spaces, line breaks, comments, and redundant attributes to improve website loading speed and performance.
+permalink: /tools/html/minify/index.html
+tags:
+- tool
+- html
+- minify
+- minification
+- optimization
+- performance
+- web-development
+- coding
+- programming
+- free-tools
+- online-tools
+- html-minifier
+- html-compressor
+- products
+thumbnail: /assets/images/html-minify.png
+collection: HTML Tools
+collection_handle: html
+collection_url: /tools/html/
+slug: minify
+file_slug: html-minify
+scripts:
+- /assets/js/html/html-minify.js
+layout: base.html
+status: production
+short_title: HTML Minify Tool
+subtitle: "Free Online HTML Minifier - Reduce File Size and Improve Performance"
+language: en
+---
+
+<section id="html-minify-section" class="block space-y-8" aria-labelledby="tool-title">
+  <div id="tool-html-minify">
+    <html-minify>
+      <div class="input">
+        <label for="textInput" class="sr-only">Type or paste your HTML code here</label>
+        <textarea id="textInput" placeholder="Type or paste your HTML code here..."
+          aria-label="Type or paste your HTML code here"></textarea>
+      </div>
+      <div class="result">
+        <label for="textResult" class="sr-only">Minified result</label>
+        <textarea id="textResult" readonly class="bg-gray-100" aria-label="Minified result"></textarea>
+      </div>
+      <div class="action">
+        <button id="copyResult" class="btn-primary" aria-label="Copy minified HTML">
+          <span>Copy Result</span>
+        </button>
+        <button id="clearAll" class="btn-danger" aria-label="Clear input and result">
+          <span>Clear</span>
+        </button>
+      </div>
+    </html-minify>
+  </div>
+  <div class="how-to-use">
+    <h2>How to use the HTML Minifier</h2>
+    <ol class="list-decimal list-inside">
+      <li>Paste or type your HTML code in the input box.</li>
+      <li>Click the <strong>Copy Result</strong> button to copy the minified HTML.</li>
+      <li>Use the <strong>Clear</strong> button to reset the fields.</li>
+    </ol>
+  </div>
+</section>

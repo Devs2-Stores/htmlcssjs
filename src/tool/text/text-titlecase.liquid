@@ -1,0 +1,61 @@
+---
+template: tool
+title: Convert Text to Title Case Online - Fast and Free | HTMLCSSJS.org
+description: Easily convert any text to Title Case online. Fast, free, and no installation required. Try it now at HTMLCSSJS.org!
+permalink: /tools/text/titlecase/index.html
+tags:
+- text
+- tool
+- products
+thumbnail: /assets/images/text-titlecase.png
+collection: Text Tools
+collection_handle: text
+collection_url: /tools/text/
+slug: titlecase
+file_slug: text-titlecase
+scripts:
+  - /assets/js/text/text-titlecase.js
+layout: base.html
+status: production
+short_title: Text Title Case Converter
+subtitle: "Online Text Title Case Converter: Instantly Capitalize Your Text Like a Headline"
+language: en
+# ✨ SEO FIELDS
+how_to_use:
+- title: How to Use the Text Title Case Converter
+  content: "Using our Text Title Case Converter is simple and straightforward. Just follow these steps:"
+  list:
+    - "Paste or type your text in the input box."
+    - "Click the <strong>Copy Result</strong> button to copy the converted text."
+    - "Use <strong>Clear</strong> to reset the fields."
+
+content_depth:
+- title: Why Use a Text Title Case Converter?
+  content: "Converting text to title case is essential for headlines, titles, and professional documents where proper capitalization is required. Our tool allows instant conversion with a single click."
+- title: Benefits of Using Title Case
+  list:
+    - "Professional Appearance: Ensures your titles look polished and consistent."
+    - "Readability: Makes headlines and titles easier to read and understand."
+    - "Standardization: Follows widely accepted style guides (APA, Chicago, etc.)."
+
+faq:
+- question: "What is a Text Title Case Converter?"
+  answer: "A tool that capitalizes the first letter of most words in your input text, following standard title capitalization rules."
+- question: "Is this Title Case converter free to use?"
+  answer: "Yes! Our tool is completely free and requires no installation or signup."
+- question: "Does this tool work on mobile devices?"
+  answer: "Absolutely! Works smoothly on smartphones, tablets, and desktop devices."
+- question: "Can I convert text with numbers and special characters?"
+  answer: "Yes, the tool will convert all words as per title case rules, while numbers and special characters remain unchanged."
+- question: "Is there a limit to the amount of text I can convert?"
+  answer: "No specific limit. For best performance, use standard text lengths as you would in documents or emails."
+---
+
+<text-titlecase>
+  {%- include 'textarea/input.html' -%}
+  {%- include 'textarea/output.html' -%}
+  <div class="action space-x-2">
+    {%- include 'buttons/copy.html' -%}
+    {%- include 'buttons/clear.html' -%}
+  </div>
+</text-titlecase>

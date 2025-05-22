@@ -1,0 +1,11 @@
+{% if faq %}
+<section class="faq-section space-y-4 mt-8">
+  <h2>Frequently Asked Questions (FAQs)</h2>
+  {% for item in faq %}
+  <div>
+    <h3>{{ item.question }}</h3>
+    <p>{{ item.answer }}</p>
+  </div>
+  {% endfor %}
+</section>
+{% endif %}

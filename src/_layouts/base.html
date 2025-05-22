@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ shop.language }}">
+
+<head>{% include "head.html" %}</head>
+
+<body class="bg-gray-100 flex flex-col justify-between min-h-screen">
+  <a href="#main-content" aria-label="hidden" class="sr-only focus:not-sr-only">Skip to main content</a>
+  {%- include "header.html" -%}
+  <main id="main-content" role="main" class="mt-[86px] mb-4">
+    <div class="container">
+      {% include "breadcrumb.html" -%}
+      <div class="block shadow-2xl rounded bg-white p-4 space-y-8 ">
+        <noscript>
+          <p class="text-red-500 text-2xl font-extrabold">!!! Please enable JavaScript to use this tool.</p>
+        </noscript>
+        <section class="tool-main">
+          {%- if status -%}
+          <h1 id="tool-title" class="sr-only">{{ short_title | default: shop.title }}</h1>
+          <h2>{{ subtitle }}</h2>
+          <p>{{ description | newline_to_br }}</p>
+          {%- endif -%}
+          {{ content }}
+          {%- if status == "production" -%}<hr>{%- endif -%}
+        </section>
+        {%- if body -%}
+        <div class="tool-body">{{ body }}</div>
+        {%- endif -%}
+        {%- include 'tool_how_to_use.html' -%}
+        {%- include 'tool_relate.html' -%}
+        {%- include 'tool_also_like.html' -%}
+        {%- include 'tool_content_depth.html' -%}
+        {%- include 'tool_faq.html' -%}
+      </div>
+    </div>
+  </main>
+  {% include "footer.html" %}
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "9221accdb60e4faabcbd2b558c2e1e16"}'></script>
+</body>
+
+</html>

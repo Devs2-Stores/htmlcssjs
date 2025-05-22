@@ -1,0 +1,25 @@
+---
+layout: base.html
+---
+<h1>HTML CSS JS - Free Online Tools</h1>
+<p>Explore our free utilities to make your daily tasks easier:</p>
+<ul class="columns-1 md:columns-2 xl:columns-3 *:break-inside-avoid space-y-4">
+  {%- for tools in collections.tools -%}
+  {%- assign production_items = tools.items | where: "data.status", "production" -%}
+  {%- if production_items.size > 0 -%}
+  <li>
+    <h2><a href="{{ tools.url }}" aria-label="{{ ss.title }}">{{ tools.title }}</a></h2>
+    <ul class="space-y-1">
+      {%- for tool in tools.items -%}
+      {%- if tool.data.status == "production" -%}
+      <li>
+        <a href="{{ tool.url }}" aria-label="{{ tool.data.short_title }}">{{ forloop.index}}. {{ tool.data.short_title
+          }}</a><br>
+      </li>
+      {%- endif -%}
+      {%- endfor -%}
+    </ul>
+  </li>
+  {%- endif -%}
+  {%- endfor -%}
+</ul>

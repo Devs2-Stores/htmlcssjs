@@ -1,0 +1,18 @@
+{%- if status == "production" -%}
+{%- assign currentCollection = collections.tools | where: "handle", handle | first -%}
+{%- assign related_tools = currentCollection -%}
+{%- if related_tools.size > 1 -%}
+<section class="tool-relate">
+  <h2>You May Also Need</h2>
+  <ul role="list" class="list-decimal list-inside space-y-1">
+    {%- for tool in related_tools.items limit: 6 -%}
+    {%- if tool.data.slug != current_slug -%}
+    <li>
+      <h3 class="inline-block text-base mb-0"><a class="link" href="{{ tool.url }}">{{ tool.data.short_title }}</a></h3>
+    </li>
+    {%- endif -%}
+    {%- endfor -%}
+  </ul>
+</section>
+{%- endif -%}
+{%- endif -%}

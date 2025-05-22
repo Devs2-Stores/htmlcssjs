@@ -1,0 +1,65 @@
+---
+template: tool
+title: Remove Vietnamese Diacritics Online - Clean Accents for SEO | HTMLCSSJS.org
+description: Instantly remove Vietnamese accents (diacritics) from your text. Useful for SEO, URL slugs, and content formatting. Fast, free, and accurate.
+permalink: /tools/seo/remove-diacritics/index.html
+tags:
+- diacritics
+- remove
+- tool
+- seo
+thumbnail: /assets/images/seo-remove-diacritics.png
+collection: SEO Tools
+collection_handle: seo
+collection_url: /tools/seo/
+slug: remove-diacritics
+file_slug: remove-diacritics
+display: production
+layout: base.html
+status: production
+short_title: Remove Diacritics
+subtitle: "Remove Vietnamese Accents (Diacritics) Instantly"
+language: en
+scripts:
+- /assets/js/seo/remove-diacritics.js
+
+how_to_use:
+- title: How to Use the Remove Diacritics Tool
+  content: "Follow these steps to clean accents from Vietnamese text:"
+  list:
+    - "Paste or type your Vietnamese text into the input box."
+    - "The output below will show the text without diacritics."
+    - "Click <strong>Copy</strong> to save the result to clipboard."
+    - "Use <strong>Clear</strong> to reset both fields."
+
+content_depth:
+- title: Why Remove Vietnamese Diacritics?
+  content: "Removing diacritics helps when generating slugs, doing SEO, or preparing text for systems that don’t support Vietnamese characters. It improves compatibility, readability, and search performance."
+- title: Key Features
+  list:
+    - "Removes all Vietnamese tones (accents) from text."
+    - "Preserves meaning and word order."
+    - "Ideal for URL slugs, filenames, and SEO use cases."
+    - "Works entirely in your browser – no data sent."
+
+faq:
+- question: "What are Vietnamese diacritics?"
+  answer: "Vietnamese diacritics are accent marks used to change pronunciation and meaning. Examples include á, ả, ã, è, ộ, etc."
+- question: "Why would I remove them?"
+  answer: "Some systems, URLs, or databases can’t handle accented characters well. Removing them makes text safer and more compatible."
+- question: "Is this tool free?"
+  answer: "Yes, it’s completely free and runs fully in your browser."
+- question: "Can I use this for other languages?"
+  answer: "It’s optimised for Vietnamese but may work for some other Latin-based languages with similar accents."
+- question: "Does this tool store my data?"
+  answer: "No. All processing happens locally in your browser for full privacy."
+---
+
+<text-remove-diacritics>
+  {%- include 'textarea/input.html' -%}
+  {%- include 'textarea/output.html' -%}
+  <div class="action space-x-2">
+    {%- include 'buttons/copy.html' -%}
+    {%- include 'buttons/clear.html' -%}
+  </div>
+</text-remove-diacritics>

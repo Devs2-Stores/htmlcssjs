@@ -1,0 +1,16 @@
+{%- if status == "production" -%}
+<nav role="navigation" aria-label="Breadcrumb" class="text-sm text-gray-500 mb-4">
+  <a href="/" class="hover:underline">Home</a> /
+  {% if template == "page"-%}
+  <a href="/tools" class="hover:underline">{{ title }}</a> /
+  {% elsif template == "tools" %}
+  <a href="/tools" class="hover:underline">Tools</a> /
+  <span aria-current="page">{{ title }}</span>
+  {% elsif template == "tool" %}
+  {%- assign currentCollection = collections.tools | where: "handle", collection_handle | first -%}
+  <a href="/tools" class="hover:underline">Tools</a> /
+  <a href="{{ currentCollection.url }}" class="hover:underline">{{ currentCollection.title }}</a> /
+  <span aria-current="page">{{ short_title }}</span>
+  {% endif %}
+</nav>
+{%- endif -%}

@@ -1,0 +1,19 @@
+{%- if status == "production" -%}
+{%- assign current_slug = slug | default: file_slug -%}
+{%- assign related_tools = collections.tools | where: "data.collection_slug", collection_slug | where: "data.status", "production" -%}
+{%- if related_tools.size > 1 -%}
+<section class="tool-relate">
+  <h2>Related Tools</h2>
+  <ul role="list" class="list-decimal list-inside space-y-1">
+
+    {%- for tool in related_tools limit: 6 -%}
+    {%- if tool.data.slug != current_slug -%}
+    <li>
+        <h3 class="inline-block text-base mb-0"><a class="link" href="{{ tool.url }}">{{ tool.data.subtitle }}</a></h3>
+    </li>
+    {%- endif -%}
+    {%- endfor -%}
+  </ul>
+</section>
+{%- endif -%}
+{%- endif -%}

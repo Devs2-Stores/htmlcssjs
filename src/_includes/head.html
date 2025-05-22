@@ -1,0 +1,89 @@
+<meta charset="UTF-8">
+
+{%- assign meta_title = meta_title | default: title -%}
+{%- assign meta_description = meta_description | default: description -%}
+<title>{{ meta_title | default: shop.title }}</title>
+<meta name="description" content="{{ description | default: shop.description | strip_newlines }}">
+<meta name="author" content="{{ shop.name }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<meta name="format-detection" content="telephone=no,email=no,address=no">
+
+<!-- Security Meta -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<!-- OpenGraph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ meta_title | default: shop.title }}">
+<meta property="og:description" content="{{ meta_description | default: shop.description | strip_newlines }}">
+<meta property="og:image" content="{{ shop.logo | prepend: shop.url }}">
+<meta property="og:url" content="{{ page.url | canonical }}">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ meta_title | default: shop.title}}">
+<meta name="twitter:description" content="{{ meta_description | default: shop.description | strip_newlines }}">
+<meta name="twitter:image" content="{{ shop.logo | prepend: shop.url }}">
+<meta name="twitter:url" content="{{ page.url | canonical }}">
+
+<!-- Robots -->
+<meta name="robots" content="index,follow">
+
+<!-- Bing Webmaster -->
+<meta name="msvalidate.01" content="1399734A356512D702321933BDB5D6D5" />
+
+<!-- Google Adsense Account -->
+<meta name="google-adsense-account" content="ca-pub-4055922370601930">
+
+<!-- Favicon -->
+<link rel="shortcut icon" fetchpriority="low" href="/public/favicon.png" type="image/png">
+
+<!-- Manifest -->
+<link rel="preload" as="fetch" href="/public/manifest.json" crossorigin="anonymous">
+<link rel="manifest" href="/public/manifest.json">
+
+<link rel="canonical" href="{{ page.url | canonical }}">
+<link rel="alternate" href="{{ page.url | canonical }}" hreflang="{{ shop.language }}">
+<link rel="alternate" href="{{ page.url | canonical }}" hreflang="x-default">
+
+<link rel="preconnect" href="https://htmlcssjs.org" crossorigin>
+<link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
+
+<link rel="preload" as="image" href="{{ shop.logo | prepend: shop.url }}" type="image/png" fetchpriority="high">
+
+<link rel="preload" as="style" fetchpriority="high" type="text/css" href="{{ '/assets/css/style.css' | version }}">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | version }}" media="all">
+
+<link rel="preload" href="{{ '/assets/js/main.js' | version}}">
+<script defer src="{{ '/assets/js/main.js' | version}}"></script> 
+
+{% if plugins -%}
+{%- for plugin in plugins -%}
+<script defer src="{{ plugin }}" crossorigin="anonymous"></script>
+{%- endfor -%}
+{%- endif %}
+
+{% if scripts -%}
+{%- for script in scripts -%}
+<link rel="preload" as="script" href="{{ script | version }}">
+<script defer src="{{ script | version }}"></script>
+{%- endfor -%}
+{%- endif %}
+
+{% include "schema.html" %}
+<style>
+  [aria-label="hidden"] {
+    display: none !important;
+  }
+</style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4055922370601930" crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GE1S2CWZL8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GE1S2CWZL8');
+</script>

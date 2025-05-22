@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ shop.language }}">
+
+<head>{% include "head.html" %}</head>
+
+<body class="bg-gray-100 flex flex-col justify-between min-h-screen">
+  <a href="#main-content" aria-label="hidden" class="sr-only focus:not-sr-only">Skip to main content</a>
+  {%- include "header.html" -%}
+  <main id="main-content" role="main" class="mt-[86px] mb-4">
+    <div class="container">
+      {% include "breadcrumb.html" -%}
+      <div class="block shadow-2xl rounded bg-white p-4 space-y-8 ">
+        <noscript>
+          <p class="text-red-500 text-2xl font-extrabold">!!! Please enable JavaScript to use this tool.</p>
+        </noscript>
+        <section class="collection-main">
+          <h1 id="collection-title" class="sr-only">{{ title }}</h1>
+          {{ content }}
+          {%- assign currentCollection = collections.tools | where: "handle", handle | first -%}
+          <hr>
+          <ul class="columns-1 md:columns-2 xl:columns-3 *:break-inside-avoid space-y-4">
+            {%- for item in currentCollection.items -%}
+            <li>
+              <a href="{{ item.url }}">{{ forloop.index }}. {{ item.data.short_title | default: item.data.title }}</a>
+            </li>
+            {%- endfor -%}
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
+  {% include "footer.html" %}
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "9221accdb60e4faabcbd2b558c2e1e16"}'></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+---
+template: tool
+title: Online Word & Character Counter Tool - Fast, Free, No Installation | HTMLCSSJS.org
+description: Welcome to our free online word and character counter tool. Easily and quickly count words and characters in your content. No installation required — just copy and paste your text to get started.
+permalink: /tools/text/counter/index.html
+tags:
+- text
+- tool
+- products
+thumbnail: /assets/images/text-counter.png
+collection: Text Tools
+collection_handle: text
+collection_url: /tools/text/
+slug: text-counter
+file_slug: counter
+scripts:
+- /assets/js/text/text-counter.js
+layout: base.html
+status: production
+short_title: Word Counter
+subtitle: "Free online word and character counting tool"
+language: en
+# ✨ SEO FIELDS
+how_to_use:
+- title: How do I use the word counter tool?
+  content: "Using our word counter tool is incredibly simple. Just follow these two quick steps:"
+  list:
+    - "Copy and paste your content into the input box."
+    - "Instantly see the word and character counts below."
+
+content_depth:
+- title: Why do you need a word counter tool?
+  content: "A word counter helps you instantly measure the length and structure of your content. It's essential for writing, editing, SEO, work-related tasks, and social media posts."
+- title: Benefits of using a word counter tool
+  list:
+    - "Real-time feedback: See your word and character count update as you type or paste text."
+    - "Writing efficiency: Stay within word or character limits for assignments, blog posts, or social media."
+    - "Editing support: Easily identify long sentences or paragraphs for better clarity."
+
+faq:
+- question: "What is a word counter tool?"
+  answer: "A word counter is an online tool that helps you count the number of words, characters, sentences, and paragraphs in your content."
+- question: "How does this tool work?"
+  answer: "This tool uses a lightweight JavaScript function to analyze your text and instantly provide statistics."
+- question: "Can I use this tool for different languages?"
+  answer: "Yes, this tool supports multiple languages and can count words in any language."
+---
+
+<text-counter>
+  {%- include 'textarea/input.html' -%}
+  <div class="result">
+    <label for="wordCount" class="sr-only">Word Count</label>
+    <p aria-label="Word Count"><strong class="text-xl">Words:</strong> <span id="wordCount">0</span></p>
+    <label for="charCount" class="sr-only">Character Count</label>
+    <p aria-label="Character Count"><strong class="text-xl">Characters:</strong> <span id="charCount">0</span></p>
+  </div>
+</text-counter>

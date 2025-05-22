@@ -1,0 +1,81 @@
+---
+template: tool
+title: Color Palette Generator Online - Create Harmonious Color Schemes | HTMLCSSJS.org
+description: Instantly generate harmonious color palettes from a base color. Useful for UI design, branding, and CSS themes. Fast, free, and privacy-friendly.
+permalink: /tools/color/palette-generator/index.html
+tags:
+- color
+- palette
+- generator
+- tool
+- design
+thumbnail: /assets/images/color-palette-generator.png
+collection: Color Tools
+collection_handle: color
+collection_url: /tools/color/
+slug: palette-generator
+file_slug: palette-generator
+display: production
+layout: base.html
+status: production
+short_title: Palette Generator
+subtitle: "Create Harmonious Color Palettes from a Base Color"
+language: en
+scripts:
+- /assets/js/color/palette-generator.js
+
+how_to_use:
+- title: How to Use the Color Palette Generator
+  content: "Follow these steps to generate a color palette:"
+  list:
+    - "Enter a base color (HEX format) or click <strong>Random</strong> to generate one."
+    - "The tool will display a palette with tints, shades, and complementary colors."
+    - "Click any color block to copy the value to clipboard."
+    - "Use <strong>Export</strong> to download the palette as CSS variables or JSON."
+
+content_depth:
+- title: Why Use a Color Palette Generator?
+  content: "Creating color palettes manually is time-consuming and subjective. This tool helps you quickly explore variations and combinations for UI, branding, or theme design with instant preview and export options."
+- title: Key Features
+  list:
+    - "Generates tints, shades, and complementary colors."
+    - "Accepts HEX color input or randomize option."
+    - "One-click copy and export to CSS or JSON."
+    - "Privacy-first: runs entirely in your browser."
+
+faq:
+- question: "What color formats does the tool support?"
+  answer: "Currently, it accepts HEX input (e.g., #3498db). Output can be copied in HEX, RGB or CSS variable format."
+- question: "Can I export the palette?"
+  answer: "Yes. You can copy individual colors or export the whole palette as a downloadable file in multiple formats."
+- question: "Is this tool free?"
+  answer: "Yes. 100% free and works completely in your browser."
+- question: "Does it require an internet connection?"
+  answer: "Only for loading the page. All processing is client-side with no data sent to any server."
+---
+<style>
+  .color-swatch {
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .color-swatch:hover {
+    transform: scale(1.025);
+  }
+  .color-swatch.copied {
+    outline: 2px solid #fff;
+    box-shadow: 0 0 0 2px black;
+  }
+</style>
+<color-palette-generator>
+  {%- include 'textarea/input.html' -%}
+  <div class="action space-x-2">
+    {%- include 'buttons/random.html' -%}
+    {%- include 'buttons/export.html' -%}
+  </div>
+  <div id="paletteResult" class="grid grid-cols-4 gap-4"></div>
+</color-palette-generator>
